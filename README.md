@@ -68,10 +68,11 @@ docker run -d --name iperf3-bot --env-file .env iperf3-bot
 ```
 /src
  ├── handlers/         # Telegram command handlers
- │    ├── user.py      # User commands and FSM states
- │    ├── func.py      # Helper functions (iperf3 execution, graph generation)
- ├── keyboards/        # ReplyKeyboards for user input
- ├── shared/           # Global settings & configuration
+ │    ├── user/
+ │       ├── user.py
+ ├── utils/           # Global settings & configuration
+ │    ├── keyboards.py # Keyboards
+ │    ├── func.py      # Functions
  │    ├── fsm_state.py # FSM states definition
  │    ├── config.py    # Environment variable handling
  ├── main.py           # Main bot entry point
